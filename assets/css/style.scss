@@ -341,42 +341,150 @@ template {
 }
 
 /**************************** Begin style.css ***********************/
-$portfolio-height: 700px;
+$pale-gold: #c0b283;
+$silk: #dcd0c0;
+$paper: #f4f4f4;
+$charcoal: #373737;
+
+$portfolio-height: 900px;
 $portfolio-width: 1100px;
 $banner-height: 75px;
 $banner-width: $portfolio-width;
+$projects-height: $portfolio-height - $banner-height;
+$projects-width: $portfolio-width;
+
+$project-height: $projects-height / 2;
+$project-width: $projects-width / 2;
+
+$image-height: $project-height * 0.55;
+$image-width: $project-width;
+$desc-height: $project-height * 0.35;
+$desc-width: $project-width;
+$links-height: $project-height * 0.10;
+$links-width: $project-width;
+
+body { 
+  font-family: Garamond, serif;
+  background: $pale-gold;
+  height: $portfolio-height + 50px;
+}
 
 #portfolio-wrapper {
   display: grid;
-  width: $portfolio-width;
   height: $portfolio-height;
+  width: $portfolio-width;
   grid-template-columns: 1fr;
   grid-template-rows: $banner-height 1fr;
+  margin: 0 auto;
 }
 
 #banner-wrapper {
   display: grid;
-  background: blue;
+  background: $pale-gold;
   grid-template-columns: $banner-height 1fr;
   grid-template-rows: $banner-height;
 }
 
 #banner-info-wrapper {
   display: grid;
+  justify-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: 60% 40%;
 }
 
+#banner-contact {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#banner-info-wrapper #banner-title {
+  font-size: 28px;
+}
+
 #projects-wrapper {
   display: grid;
-  background: red;
+  height: $projects-height;
+  width: $projects-width;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10px;
 }
 
 .project-wrapper {
   display: grid;
+  height: $project-height;
+  width: $project-width;
+  justify-items: center;
+  align-items: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 55% 30% 150%;
-  background: orange;
+  grid-template-rows: $image-height $desc-height $links-height;
+  background: $charcoal;
+  margin: 0;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px grey;
+}
+
+.image {
+  height: $image-height;
+  width: $image-width;
+}
+
+.desc {
+  height: $desc-height;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: $pale-gold;
+}
+
+.links-wrapper {
+  height: $links-height;
+  width: $links-width;
+  text-align: center;
+  border-radius: 0px 0px 5px 5px;
+  background: $silk;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip:    padding;
+  background-clip:         padding-box;
+}
+
+a {
+  -webkit-appearance: button;
+  -moz-appearance:    button;
+  appearance:         button;
+
+  text-decoration: none;
+  color: initial;
+  border-radius: 5px;
+  padding: 2px;
+  box-shadow: 2px 2px grey;
+}
+
+#home a,
+#resume a,
+#github a {
+  background: $silk;
+}
+
+.desc a {
+  -webkit-appearance: initial;
+  -moz-appearance:    initial;
+  appearance:         initial;
+  text-decoration: underline;
+  color: blue;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.links a {
+  background: $paper;
+  margin: 5px;
+}
+
+#resume-wrapper {
+  width: 800px;
+  margin: 0 auto;
 }
