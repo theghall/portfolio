@@ -440,6 +440,11 @@ body {
 }
 
 .links-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
   height: $links-height;
   width: $links-width;
   text-align: center;

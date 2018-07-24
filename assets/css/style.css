@@ -365,6 +365,11 @@ body {
   background: #c0b283; }
 
 .links-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
   height: 41.25px;
   width: 550px;
   text-align: center;
