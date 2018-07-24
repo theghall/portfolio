@@ -343,7 +343,9 @@ template {
 /**************************** Begin style.css ***********************/
 $pale-gold: #c0b283;
 $silk: #dcd0c0;
+$dark-silk: $silk - #0c0c0c;
 $paper: #f4f4f4;
+$dark-paper: $paper - #0c0c0c;
 $charcoal: #373737;
 
 $portfolio-height: 900px;
@@ -466,7 +468,7 @@ a.button {
 #home a,
 #resume a,
 #github a {
-  background: $silk;
+  background: linear-gradient($dark-silk 40%, $silk 60%);
 }
 
 .desc a {
@@ -481,7 +483,7 @@ a.button {
 }
 
 .links a {
-  background: $paper;
+  background: linear-gradient($dark-paper 40%, $paper 60%);
   margin: 5px;
 }
 

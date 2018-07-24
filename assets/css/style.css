@@ -389,7 +389,7 @@ a.button {
 #home a,
 #resume a,
 #github a {
-  background: #dcd0c0; }
+  background: linear-gradient(#d0c4b4 40%, #dcd0c0 60%); }
 
 .desc a {
   -webkit-appearance: initial;
@@ -402,7 +402,7 @@ a.button {
   box-shadow: none; }
 
 .links a {
-  background: #f4f4f4;
+  background: linear-gradient(#e8e8e8 40%, #f4f4f4 60%);
   margin: 5px; }
 
 #resume-wrapper {
